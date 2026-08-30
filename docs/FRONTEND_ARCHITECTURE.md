@@ -14,6 +14,50 @@ Organização do código
   - src/features/projects/usecases
   - src/features/projects/repositories
 
+Estrutura inicial criada (scaffold):
+src/
+  app/
+    router/
+    config/
+    providers/
+
+  core/
+    errors/
+    result/
+    types/
+    constants/
+
+  domain/
+    user/
+    organization/
+    module/
+    automation/
+    integration/
+
+  application/
+    auth/
+    organizations/
+    catalog/
+    dashboard/
+    modules/
+
+  infrastructure/
+    api/
+    repositories/
+    mocks/
+    storage/
+
+  presentation/
+    components/
+    pages/
+    layouts/
+    composables/
+
+  assets/
+  styles/
+
+Essa estrutura respeita a regra: Domain e Application não dependem de Vue.
+
 Dependências e Injeção
 - Interfaces de Repositories definidas no Domain/Ports
 - Implementações (Mocks) colocadas em infra/mock

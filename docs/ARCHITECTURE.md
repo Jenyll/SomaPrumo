@@ -13,6 +13,9 @@ Camadas (frontend adaptado)
 - Domain: entidades, value objects, regras de negócio puras
 - Infrastructure: Repositories, Adapters (mock ou real quando houver backend)
 
+Nota: Scaffold inicial do frontend foi implementado em branch `feat/frontend-foundation`.
+Estrutura de diretórios criada em `src/` com as camadas: `app`, `core`, `domain`, `application`, `infrastructure`, `presentation`, `assets`, `styles`.
+
 Padrões
 - Repository Pattern para acesso a dados
 - Dependency Inversion: injetar implementações de Repositories via factories ou providers

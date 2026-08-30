@@ -14,11 +14,13 @@ Concluído:
 
 Em andamento:
 - Preenchimento de detalhes de arquitetura frontend e modelos de domínio
+- Scaffold frontend inicial em progresso (branch feat/frontend-foundation)
 
 Próximos passos:
 - Definir mocks e contratos de API iniciais (docs/API_CONTRACTS.md, docs/MOCKS.md)
 - Padronizar validações e regras de negócio (docs/VALIDATIONS.md, docs/BUSINESS_RULES.md)
 - Criar esqueleto de project setup (sem telas)
+- Scaffold frontend criado; executar checagens e corrigir problemas
 
 Problemas conhecidos:
 - Backend inexistente — depender de Mock Repositories
