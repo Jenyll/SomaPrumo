@@ -31,7 +31,10 @@ Decisões pendentes:
 - Padrões de deploy e CI/CD
 
 Status dos testes:
-- Configuração de framework definida (Vitest + Playwright) — integrações ainda não configuradas
+Configuração de framework definida (Vitest + Playwright).
+- Testes unitários: passando (1 teste de smoke)
+- E2E: configuração inicial pronta (sem testes E2E implementados)
 
 Último build válido:
-- Nenhum build formal ainda. Validar após scaffolding inicial.
+Build de scaffold válido: `vite build` executado com sucesso em 2026-08-30.
+

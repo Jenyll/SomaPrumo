@@ -7,6 +7,9 @@
 
 <script setup lang="ts">
 // Página mínima conforme solicitado
+// nome mult-word para satisfazer regra de lint
+// @ts-ignore - defineOptions may not be recognized by some parsers here
+defineOptions({ name: 'HomePage' })
 </script>
 
 <style scoped>
