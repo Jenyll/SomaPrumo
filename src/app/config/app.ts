@@ -1,0 +1,5 @@
+export const appConfig = {
+                    appName: 'SomaPrumo',
+                    version: '0.1.0',
+                    environment: 'development',
+}

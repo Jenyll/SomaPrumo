@@ -1,5 +1,10 @@
-:root{
-  --bg:#ffffff;
-  --fg:#0f1724;
+:root {
+                    --bg: #ffffff;
+                    --fg: #0f1724;
 }
-body{background:var(--bg);color:var(--fg);font-family:Manrope, Arial, sans-serif}
+
+body {
+                    background: var(--bg);
+                    color: var(--fg);
+                    font-family: Manrope, Arial, sans-serif
+}
