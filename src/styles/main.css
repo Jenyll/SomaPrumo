@@ -2,7 +2,7 @@
 @import '../assets/styles/tokens.css';
 @import '../assets/styles/typography.css';
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body { margin: 0; min-width: 320px; background: var(--color-bg-light); color: var(--color-text-dark); }
 img { max-width: 100%; display: block; }
 button, a, input, textarea, select { font: inherit; }
@@ -10,7 +10,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-underline-offset: 6px; }
 button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 5px; }
-[id] { scroll-margin-top: 24px; }
+[id] { scroll-margin-top: 96px; }
 .container { width: min(var(--container-width), calc(100% - var(--page-gutter) * 2)); margin-inline: auto; }
 .section-space { padding-block: var(--section-space); }
 .dark-section { background: var(--color-bg-dark); color: var(--color-text-light); --color-focus: var(--sp-bronze-400); }
@@ -25,9 +25,11 @@ button { cursor: pointer; }
 .button-dark:hover { background: var(--sp-charcoal-800); }
 .text-link { display: inline-flex; gap: 24px; align-items: center; min-height: 48px; font-size: .8rem; text-decoration: underline; }
 .actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
-.skip-link { position: fixed; left: 16px; top: 16px; z-index: 20; padding: 14px; background: var(--color-bg-light); color: var(--color-text-dark); }
+.skip-link { position: fixed; left: 16px; top: 16px; z-index: 40; padding: 14px; background: var(--color-bg-light); color: var(--color-text-dark); }
 .skip-link:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; padding: 0; overflow: hidden; white-space: nowrap; }
 @media (max-width: 767px) {
+  html { scroll-padding-top: 88px; }
+  [id] { scroll-margin-top: 88px; }
   .section-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
   .eyebrow { margin-bottom: 16px; font-size: .65rem; }
   .actions { gap: 12px 24px; }
