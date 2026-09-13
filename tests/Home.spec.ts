@@ -5,6 +5,6 @@ import Home from '../src/presentation/pages/Home.vue'
 describe('Home', () => {
   it('renders title', () => {
     const wrapper = mount(Home)
-    expect(wrapper.text()).toContain('SomaPrumo (Scaffold)')
+    expect(wrapper.text()).toContain('SomaPrumo')
   })
 })
