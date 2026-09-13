@@ -1,5 +1,6 @@
 export const brand = {
   brandName: 'SomaPrumo',
+  logoDescriptor: 'Contabilidade e gestão',
   descriptor: 'Financeiro, contabilidade e fiscal',
   slogan: 'Operações com clareza.',
   heroEyebrow: 'Plataforma + Automação + Especialização',
