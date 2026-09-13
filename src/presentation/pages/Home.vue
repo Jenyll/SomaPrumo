@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import SiteHeader from '@/components/home/SiteHeader.vue'
 import HeroSection from '@/components/home/HeroSection.vue'
+import TrustStrip from '@/components/home/TrustStrip.vue'
+import SolutionsExplorer from '@/components/home/SolutionsExplorer.vue'
 import SolutionsSection from '@/components/home/SolutionsSection.vue'
 import AutomationSection from '@/components/home/AutomationSection.vue'
 import AuditSection from '@/components/home/AuditSection.vue'
+import PlansPreview from '@/components/home/PlansPreview.vue'
 import TeamSection from '@/components/home/TeamSection.vue'
 import ContactSection from '@/components/home/ContactSection.vue'
 import SiteFooter from '@/components/home/SiteFooter.vue'
@@ -16,9 +19,12 @@ defineOptions({ name: 'HomePage' })
   <SiteHeader />
   <main id="conteudo" tabindex="-1">
     <HeroSection />
+    <TrustStrip />
+    <SolutionsExplorer />
     <SolutionsSection />
     <AutomationSection />
     <AuditSection />
+    <PlansPreview />
     <TeamSection :members="teamMembers" />
     <ContactSection />
   </main>
