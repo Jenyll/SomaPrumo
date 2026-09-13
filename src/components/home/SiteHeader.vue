@@ -37,6 +37,7 @@ function closeWithEscape() {
         <a v-for="item in brand.navigation" :key="item.href" :href="item.href" @click="menuOpen = false">
           {{ item.label }}
         </a>
+        <RouterLink class="login-link" :to="brand.links.login" @click="menuOpen = false">Entrar</RouterLink>
         <a class="button button-dark header-cta" :href="brand.links.contact" @click="menuOpen = false">
           {{ brand.primaryCta }} <span aria-hidden="true">↗</span>
         </a>
@@ -73,7 +74,7 @@ function closeWithEscape() {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 1.6vw, 26px);
+  gap: clamp(13px, 1.4vw, 24px);
 }
 
 .main-nav > a:not(.button) {
@@ -82,7 +83,7 @@ function closeWithEscape() {
   min-height: 44px;
   align-items: center;
   color: var(--color-text-muted);
-  font-size: .71rem;
+  font-size: .69rem;
   text-decoration: none;
 }
 
@@ -110,11 +111,17 @@ function closeWithEscape() {
   transform: scaleX(1);
 }
 
+.login-link {
+  padding-inline: 4px;
+  color: var(--color-text-dark) !important;
+  font-weight: 600;
+}
+
 .header-cta {
   min-height: 42px;
   padding: 11px 16px;
   gap: 14px;
-  font-size: .71rem;
+  font-size: .69rem;
 }
 
 .menu-toggle {
@@ -122,8 +129,8 @@ function closeWithEscape() {
 }
 
 @media (max-width: 1180px) {
-  .main-nav { gap: 14px; }
-  .main-nav > a:not(.button) { font-size: .68rem; }
+  .main-nav { gap: 12px; }
+  .main-nav > a:not(.button) { font-size: .66rem; }
 }
 
 @media (max-width: 1023px) {
