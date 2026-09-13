@@ -5,12 +5,18 @@ import {
 } from 'vue-router'
 
 import Home from '../../presentation/pages/Home.vue'
+import Login from '../../presentation/pages/Login.vue'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
     component: Home,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
   },
 ]
 
