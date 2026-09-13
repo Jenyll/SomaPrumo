@@ -7,7 +7,7 @@ export const brand = {
   heroSupportText: 'Organizamos processos financeiros, contábeis e fiscais para pessoas, MEIs e empresas — com automação, controle e conhecimento especializado.',
   primaryCta: 'Fale com um especialista',
   secondaryCta: 'Conheça as soluções',
-  links: { contact: '#contato', solutions: '#servicos' },
+  links: { contact: '#contato', solutions: '#servicos', login: '/login' },
   navigation: [
     { label: 'Serviços', href: '#servicos' },
     { label: 'Soluções', href: '#solucoes' },
