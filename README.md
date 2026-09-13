@@ -20,3 +20,6 @@ Primeiros passos
 1. Ler AGENTS.md e PROJECT_STATE.md
 2. Revisar docs/ antes de qualquer implementação
 # SomaPrumo
+## Ambiente de desenvolvimento
+
+Use Node 24.15 ou superior da linha 24 (`nvm use`, versão definida em `.nvmrc`). O CI usa o mesmo arquivo. Execute `npm ci`, `npm run check` e, após `npx playwright install chromium`, `npm run test:e2e`.

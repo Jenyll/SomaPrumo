@@ -37,3 +37,4 @@ Formato
 - Validação: tipos e lint aprovados; 5 testes Vitest e 10 E2E aprovados; build aprovado. Inspeção visual nas oito larguras, sem overflow e sem erros de console nos E2E.
 - Imagem de Hero local; retratos originais preservados com lazy loading. Documentação de produto, marca, design, arquitetura, rotas, regras, testes e estado atual atualizada.
 - Entrega: PR #1 aberto (https://github.com/Jenyll/SomaPrumo/pull/1), branch feat/landing-institucional, commit de implementação 58eeae7. Integração GitHub retornou 403 na criação; PR concluído pela API com a autenticação Git já configurada.
+- Pós-abertura do PR: CI identificou runtime Node 20 incompatível com jsdom 30 do lockfile. Corrigido para Node 24 via .nvmrc compartilhado (ADR-011), sem alterar dependências.

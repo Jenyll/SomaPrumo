@@ -37,3 +37,6 @@ Validação
 - Nenhuma suíte separada de integração com backend existe; Vitest monta e exercita a Home integrada aos componentes.
 - PR aberto: https://github.com/Jenyll/SomaPrumo/pull/1 — feat/landing-institucional → feat/frontend-foundation.
 - Arquivo incremental tsconfig.tsbuildinfo permanece com alteração local, fora do commit.
+
+Ambiente de desenvolvimento e CI
+- Node 24.15+ da linha 24, definido em .nvmrc (ADR-011). Corrige incompatibilidade do workflow anterior em Node 20 com jsdom/undici.

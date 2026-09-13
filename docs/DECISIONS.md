@@ -61,3 +61,10 @@ ADR-010: Landing comercial focada e independente do domínio operacional
 - A credencial de auditor fiscal na operação é confirmada pelo briefing, sem atribuir nomes, métricas ou promessas tributárias.
 - CTAs usam âncoras reais; contato temporário “loreimpus”, por instrução explícita do responsável. Sem URL fictícia ou envio simulado; href oficial será configurado depois.
 - Testes E2E usam Chromium nas oito larguras solicitadas, teclado e reduced motion; ADR-005/006 mantidos.
+
+
+ADR-011: Node 24 para desenvolvimento e CI
+- Data: 2026-09-13
+- Status: implementado.
+- Decisão: .nvmrc define Node 24; CI lê o mesmo arquivo. Usar versão 24.15 ou superior da linha 24, compatível com jsdom 30 já fixado no lockfile.
+- Justificativa: CI anterior usava Node 20 e falhou ao inicializar o Vitest (undici/webidl.util.markAsUncloneable), embora a validação local em Node 24.18 passasse. O problema precedia a refatoração e foi evidenciado no primeiro PR. Nenhuma dependência foi atualizada para contornar o erro.

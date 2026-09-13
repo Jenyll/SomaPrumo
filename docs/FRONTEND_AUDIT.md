@@ -45,3 +45,7 @@ Resultado
 - JS 110,57 kB (41,50 kB gzip); CSS 20,46 kB (4,67 kB gzip). Foto de Hero local de 181,11 kB.
 - Original pesado da equipe permanece preservado e usa lazy loading. Otimização de derivados pode ser feita em etapa própria.
 - Verificação binária confirmou que todos os assets oficiais de marca e equipe mantiveram o conteúdo original.
+
+Validação remota
+- Primeiro CI do PR identificou incompatibilidade preexistente: workflow Node 20 versus jsdom 30/undici do lockfile. Erro de inicialização webidl.util.markAsUncloneable, antes dos testes.
+- Runtime alinhado ao Node 24 usado na validação local, via .nvmrc compartilhado com CI (ADR-011).

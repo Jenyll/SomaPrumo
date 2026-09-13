@@ -34,3 +34,7 @@ Resultados em 2026-09-13
 - Revisão visual complementar de seções em 375 e 768 px. Validar hierarquia, respiro, fotos, controle de carrossel e contato.
 - Não há suítes de integração real com backend, pois ele não existe. Nenhum teste anterior foi removido.
 - Testes executados em Chromium; outros motores e auditoria WCAG completa não fazem parte da evidência desta execução.
+
+Ambiente de execução (ADR-011)
+- Usar Node 24.15+ da linha 24; .nvmrc e CI compartilham a versão 24.
+- CI inicial do PR falhou com Node 20 na inicialização de jsdom/undici, antes de executar testes. Corrigida a configuração de runtime para corresponder ao ambiente local validado (24.18).
