@@ -36,3 +36,4 @@ Formato
 - ADR-009 e ADR-010 documentados; domínio e contratos existentes intactos.
 - Validação: tipos e lint aprovados; 5 testes Vitest e 10 E2E aprovados; build aprovado. Inspeção visual nas oito larguras, sem overflow e sem erros de console nos E2E.
 - Imagem de Hero local; retratos originais preservados com lazy loading. Documentação de produto, marca, design, arquitetura, rotas, regras, testes e estado atual atualizada.
+- Entrega: PR #1 aberto (https://github.com/Jenyll/SomaPrumo/pull/1), branch feat/landing-institucional, commit de implementação 58eeae7. Integração GitHub retornou 403 na criação; PR concluído pela API com a autenticação Git já configurada.

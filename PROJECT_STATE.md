@@ -35,4 +35,5 @@ Validação
 - npm run check: passou.
 - npm run test:e2e: 10 passaram, Chromium instalado para a sessão em /tmp/somaprumo-browsers.
 - Nenhuma suíte separada de integração com backend existe; Vitest monta e exercita a Home integrada aos componentes.
-- PR preparado a partir da branch de trabalho, com base em feat/frontend-foundation para revisão da evolução da landing.
+- PR aberto: https://github.com/Jenyll/SomaPrumo/pull/1 — feat/landing-institucional → feat/frontend-foundation.
+- Arquivo incremental tsconfig.tsbuildinfo permanece com alteração local, fora do commit.
