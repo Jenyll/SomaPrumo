@@ -28,7 +28,7 @@ const isMarkOnly = computed(() => props.variant === 'mark')
 
     <span v-if="!isMarkOnly" class="brand-logo__copy">
       <span class="brand-logo__name">{{ brand.brandName }}</span>
-      <span class="brand-logo__descriptor">{{ brand.descriptor }}</span>
+      <span class="brand-logo__descriptor">{{ brand.logoDescriptor }}</span>
     </span>
   </span>
 </template>
