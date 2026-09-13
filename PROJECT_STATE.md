@@ -1,40 +1,42 @@
 Projeto: SomaPrumo
 ===================
 
-Fase atual:
-- Inicialização / documentação (Discovery & Setup)
+Fase atual
+- Landing institucional refatorada para Plataforma + Automação + Especialização (2026-09-13).
 
-Objetivo atual:
-- Preparar a estrutura documental, decisões arquiteturais e regras de continuidade. Não implementar telas ou funcionalidades.
+Objetivo concluído nesta etapa
+- Apresentação comercial de operações financeiras, contábeis e fiscais, com automações personalizadas e auditoria fiscal; foco B2B e atendimento também a pessoas físicas.
 
-Concluído:
-- Documento inicial do produto (docs/PRODUCT.md)
-- Decisões arquiteturais iniciais (docs/DECISIONS.md)
-- Estrutura de docs criada
+Concluído
+- Documentação inicial, scaffold Vue 3/TypeScript/Vite e camadas existentes preservados.
+- Trabalho local anterior de rebranding, alias @ e assets oficiais incorporado à evolução.
+- Tokens charcoal/bronze/sand/ivory e Cormorant Garamond + Inter centralizados (ADR-009).
+- Header responsivo, Hero editorial, quatro pilares, automação, metodologia, auditoria, tecnologia, equipe, CTA e footer.
+- Removidos da UI pública métricas sem evidência e conteúdo de engenharia/construção.
+- Navegação por âncoras, detalhes das áreas, carrossel acessível e reduced motion.
+- Revisão visual em 375, 390, 430, 768, 1024, 1280, 1440 e 1920 px, sem overflow horizontal detectado.
+- Type-check, lint, 5 testes Vitest e 10 testes Playwright passando; build local válido em 2026-09-13.
+- Auditoria e baseline registrados em docs/FRONTEND_AUDIT.md; continuidade em docs/PROGRESS.md.
 
-Em andamento:
-- Preenchimento de detalhes de arquitetura frontend e modelos de domínio
-- Scaffold frontend inicial em progresso (branch feat/frontend-foundation)
+Pendências
+- Contato real será adicionado pelo responsável. Placeholder autorizado: “loreimpus” em src/config/brand.ts (`contact.label` e `contact.href`).
+- Backend inexistente; módulos e integrações são apresentação comercial, não operações reais.
+- Contratos de API, fixtures, regras e autenticação real continuam para etapas futuras; não alterados nesta tarefa.
+- Original partner-1.svg tem 5,59 MB; preservado com carregamento tardio. Avaliar derivados otimizados futuramente.
+- Fontes dependem de Google Fonts, com fallbacks locais.
 
-Próximos passos:
-- Definir mocks e contratos de API iniciais (docs/API_CONTRACTS.md, docs/MOCKS.md)
-- Padronizar validações e regras de negócio (docs/VALIDATIONS.md, docs/BUSINESS_RULES.md)
-- Criar esqueleto de project setup (sem telas)
-- Scaffold frontend criado; executar checagens e corrigir problemas
+Decisões
+- ADR-001 a ADR-006 mantidos: Vue, Clean Architecture, repositories, mocks, Vitest e Playwright.
+- ADR-007 evoluído pelo ADR-009: Inter como fonte funcional aprovada.
+- ADR-008 mantido: n8n fora da arquitetura.
+- ADR-010: escopo comercial atual, apresentação separada do domínio e contato temporário.
 
-Problemas conhecidos:
-- Backend inexistente — depender de Mock Repositories
-- Recursos/PO ainda não definidos (contato para decisões de produto)
+Validação
+- npm run check: passou.
+- npm run test:e2e: 10 passaram, Chromium instalado para a sessão em /tmp/somaprumo-browsers.
+- Nenhuma suíte separada de integração com backend existe; Vitest monta e exercita a Home integrada aos componentes.
+- PR aberto: https://github.com/Jenyll/SomaPrumo/pull/1 — feat/landing-institucional → feat/frontend-foundation.
+- Arquivo incremental tsconfig.tsbuildinfo permanece com alteração local, fora do commit.
 
-Decisões pendentes:
-- Detalhes do modelo de autorização/autenticação
-- Padrões de deploy e CI/CD
-
-Status dos testes:
-Configuração de framework definida (Vitest + Playwright).
-- Testes unitários: passando (1 teste de smoke)
-- E2E: configuração inicial pronta (sem testes E2E implementados)
-
-Último build válido:
-Build de scaffold válido: `vite build` executado com sucesso em 2026-08-30.
-
+Ambiente de desenvolvimento e CI
+- Node 24.15+ da linha 24, definido em .nvmrc (ADR-011). Corrige incompatibilidade do workflow anterior em Node 20 com jsdom/undici.
