@@ -43,3 +43,21 @@ ADR-008: n8n fora da arquitetura
 
 Como usar esta página
 - Cada ADR deve conter: id, data, decisão, justificativa e status (aberto/implementado).
+
+
+ADR-009: Identidade editorial — Cormorant Garamond + Inter e charcoal/bronze
+- Data: 2026-09-13
+- Status: implementado; substitui a escolha de Manrope no ADR-007.
+- Decisão: centralizar Cormorant Garamond/Inter e tokens semânticos em assets/styles; grandes superfícies charcoal, ivory e sand, bronze pontual com variante de texto acessível em fundo claro.
+- Justificativa: briefing e trabalho local aprovam identidade institucional editorial, com fotografia e hierarquia tipográfica; evitar conflitos entre tokens e overrides globais.
+- Assets oficiais permanecem intactos. Sem biblioteca visual adicional.
+
+ADR-010: Landing comercial focada e independente do domínio operacional
+- Data: 2026-09-13
+- Status: implementado.
+- Decisão: compor Home com componentes em src/components/home, conteúdo de pilares em src/data/solutions.ts e marca/navegação/contato em src/config/brand.ts.
+- Justificativa: evoluir o frontend existente incrementalmente, mantendo ADR-001/002/003/004 e a independência de Domain/Application. Conteúdo comercial não altera ModuleKind nem antecipa implementação de produtos.
+- Quatro pilares públicos: Financeiro, Contabilidade, Fiscal e Investimentos; automação personalizada e auditoria fiscal atravessam a narrativa. Engenharia permanece apenas possibilidade interna futura, sem exposição pública.
+- A credencial de auditor fiscal na operação é confirmada pelo briefing, sem atribuir nomes, métricas ou promessas tributárias.
+- CTAs usam âncoras reais; contato temporário “loreimpus”, por instrução explícita do responsável. Sem URL fictícia ou envio simulado; href oficial será configurado depois.
+- Testes E2E usam Chromium nas oito larguras solicitadas, teclado e reduced motion; ADR-005/006 mantidos.

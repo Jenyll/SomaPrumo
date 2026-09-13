@@ -1,0 +1,15 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brand guidelines reference">
+  <rect width="1280" height="720" fill="#F6F4F1"/>
+  <rect x="80" y="80" width="1120" height="560" rx="32" fill="#FFFFFF" stroke="#DCCDBA" stroke-width="2"/>
+  <text x="120" y="170" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1B1B1D">Brand Guidelines</text>
+  <rect x="120" y="210" width="220" height="140" rx="18" fill="#1B1B1D"/>
+  <rect x="380" y="210" width="220" height="140" rx="18" fill="#A67C52"/>
+  <rect x="640" y="210" width="220" height="140" rx="18" fill="#DCCDBA"/>
+  <rect x="900" y="210" width="220" height="140" rx="18" fill="#F6F4F1" stroke="#DCCDBA"/>
+  <text x="120" y="430" font-family="Georgia, serif" font-size="48" fill="#1B1B1D">Cormorant Garamond</text>
+  <text x="120" y="495" font-family="Arial, sans-serif" font-size="36" fill="#1B1B1D">Inter</text>
+  <text x="700" y="345" font-family="Arial, sans-serif" font-size="18" fill="#1B1B1D">#1B1B1D</text>
+  <text x="700" y="382" font-family="Arial, sans-serif" font-size="18" fill="#1B1B1D">#A67C52</text>
+  <text x="700" y="419" font-family="Arial, sans-serif" font-size="18" fill="#1B1B1D">#DCCDBA</text>
+  <text x="700" y="456" font-family="Arial, sans-serif" font-size="18" fill="#1B1B1D">#F6F4F1</text>
+</svg>

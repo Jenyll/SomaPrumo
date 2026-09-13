@@ -1,0 +1,25 @@
+export const brand = {
+  brandName: 'SomaPrumo',
+  descriptor: 'Financeiro, contabilidade e fiscal',
+  slogan: 'Operações com clareza.',
+  heroEyebrow: 'Plataforma + Automação + Especialização',
+  heroSupportText: 'Organizamos e automatizamos processos financeiros, contábeis e fiscais de acordo com a realidade da sua empresa.',
+  primaryCta: 'Fale com um especialista',
+  secondaryCta: 'Conheça as soluções',
+  links: { contact: '#contato', solutions: '#solucoes' },
+  navigation: [
+    { label: 'Soluções', href: '#solucoes' },
+    { label: 'Automação', href: '#automacao' },
+    { label: 'Auditoria fiscal', href: '#auditoria' },
+    { label: 'Quem somos', href: '#equipe' },
+  ],
+  teamEyebrow: 'Quem faz o SomaPrumo',
+  teamTitle: 'Tecnologia com pessoas que entendem de processos.',
+  teamDescription: 'Reunimos tecnologia, organização operacional e conhecimento fiscal especializado. A escuta vem primeiro: entender a sua rotina é o ponto de partida de cada solução.',
+  contactEyebrow: 'O próximo passo',
+  contactTitle: 'Vamos dar mais clareza à sua operação?',
+  contactDescription: 'Conte o que hoje depende de planilhas, conferências manuais ou informações espalhadas. Começamos entendendo o seu processo.',
+  // Placeholder requested by the owner. Supply an official URL before publication.
+  contact: { label: 'loreimpus', href: '' as string },
+  footerSupportText: 'Plataforma, automação e especialização para organizar operações financeiras, contábeis e fiscais.',
+} as const

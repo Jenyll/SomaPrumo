@@ -1,0 +1,10 @@
+:root {
+  --font-display: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+body { font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6, .font-display { font-family: var(--font-display); font-weight: 500; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(2.5rem, 4vw, 3.8rem); line-height: 1.06; letter-spacing: -0.025em; }
+h3 { font-size: 1.9rem; line-height: 1.15; }
+p { line-height: 1.75; }
