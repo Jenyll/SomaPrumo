@@ -27,3 +27,7 @@ Atualizado em 22/09/2026.
 ## Ambiente
 
 Vue 3, TypeScript, Vite, Vue Router e Pinia. Node 24 conforme ADR-011. Sem dependências novas.
+
+## Revisão
+
+PR #2: https://github.com/Jenyll/SomaPrumo/pull/2. Branch feat/financial-core, baseada em feat/landing-institucional.

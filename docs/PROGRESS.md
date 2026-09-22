@@ -66,3 +66,4 @@ Formato
 - ADR-012, domínio, contratos, análise da planilha e estado do projeto atualizados.
 - Validação local: npm run check aprovado, com 56 testes. Nenhuma mudança em telas ou dependências.
 - E2E local tentado: servidor liberado e navegador instalado em /tmp, mas o sandbox macOS bloqueou a inicialização do Chromium (MachPortRendezvousServer, Permission denied). Nenhum teste de página chegou a executar nessa tentativa.
+- Entrega: PR #2 (https://github.com/Jenyll/SomaPrumo/pull/2), branch feat/financial-core, base feat/landing-institucional. Código no commit fbd4307; CI remoto acompanha os testes de navegador.
