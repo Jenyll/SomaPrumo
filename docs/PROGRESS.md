@@ -54,3 +54,15 @@ Formato
 - Alinhadas as âncoras internas do menu com os IDs reais da home (`#para-voce`, `#mei`, `#empresas`, `#solucoes`, `#automacao`, `#auditoria`) para garantir navegação válida sem links quebrados.
 - Mantidas as regras do briefing: radio para Para você/MEI, checkbox para Empresas, preço apresentado abaixo da seleção, sem valores inventados e sem checkout/WhatsApp fictícios.
 - Validação final concluída: type-check, lint, Vitest e build aprovados.
+
+2026-09-22 — Conclusão do núcleo financeiro derivado da planilha
+- Revisado o trabalho local existente e preservado snapshot antes das correções.
+- Baseline de type-check falhava em Money.ts e InvoiceService.ts interrompidos.
+- Corrigidos imports/exports, dependência uuid ausente (substituída por crypto.randomUUID), precisão decimal, datas, estados e validações.
+- Implementados cronograma de parcelas, divisões conservativas por pessoa/parcela, provisões e orçamento realizado sem duplicidade.
+- FinancialWorkspace integra compras, faturas, pagamentos, recebíveis, transferências e renda fixa com MockFinancialRepository atômico e auditado.
+- Repositório começa vazio e devolve snapshots reconstruídos, sem importar dados pessoais da planilha.
+- Testes de orçamento/investimento que antes simulavam regras foram substituídos por cenários reais de integração.
+- ADR-012, domínio, contratos, análise da planilha e estado do projeto atualizados.
+- Validação local: npm run check aprovado, com 56 testes. Nenhuma mudança em telas ou dependências.
+- E2E local tentado: servidor liberado e navegador instalado em /tmp, mas o sandbox macOS bloqueou a inicialização do Chromium (MachPortRendezvousServer, Permission denied). Nenhum teste de página chegou a executar nessa tentativa.
