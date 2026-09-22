@@ -41,7 +41,8 @@ onBeforeUnmount(() => observer?.disconnect())
           <p class="team-role">{{ member.role }}</p>
           <h3>{{ member.name }}</h3>
           <p>{{ member.description }}</p>
-          <a class="text-link" :href="brand.links.contact">{{ brand.primaryCta }} <span aria-hidden="true">↗</span></a>
+          <button type="button" class="text-link is-placeholder-action">{{ brand.primaryCta }}</button>
+          <!-- TODO: conectar à jornada comercial quando a rota estiver disponível. -->
         </div>
       </article>
     </div>

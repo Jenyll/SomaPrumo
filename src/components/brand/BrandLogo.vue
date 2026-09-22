@@ -7,23 +7,31 @@ import { brand } from '@/config/brand'
 interface Props {
   variant?: 'wordmark' | 'mark'
   alt?: string
+  theme?: 'light' | 'dark'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   variant: 'wordmark',
   alt: 'SomaPrumo',
+  theme: 'light',
 })
 
 const isMarkOnly = computed(() => props.variant === 'mark')
 </script>
 
 <template>
-  <span class="brand-logo" :class="{ 'brand-logo--mark-only': isMarkOnly }">
+  <span
+    class="brand-logo"
+    :class="[
+      { 'brand-logo--mark-only': isMarkOnly },
+      `brand-logo--${props.theme}`,
+    ]"
+  >
     <img
       :src="logoMark"
-      :alt="isMarkOnly ? alt : ''"
+      :alt="isMarkOnly ? props.alt : ''"
       class="brand-logo__mark"
-      :aria-hidden="isMarkOnly ? undefined : 'true'"
+      :aria-hidden="!isMarkOnly"
     />
 
     <span v-if="!isMarkOnly" class="brand-logo__copy">
@@ -37,48 +45,58 @@ const isMarkOnly = computed(() => props.variant === 'mark')
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   max-width: 100%;
   color: var(--color-text-dark);
 }
 
 .brand-logo__mark {
   display: block;
-  width: 34px;
-  height: 58px;
-  flex: 0 0 auto;
+  width: 28px;
+  height: 54px;
+  flex: 0 0 28px;
   object-fit: contain;
+  object-position: center;
 }
 
 .brand-logo__copy {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  justify-content: center;
+  gap: 2px;
   min-width: 0;
 }
 
 .brand-logo__name {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  line-height: .95;
-  letter-spacing: -.025em;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
   white-space: nowrap;
 }
 
 .brand-logo__descriptor {
-  font-family: var(--font-sans);
-  font-size: .58rem;
+  display: block;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.52rem;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: .11em;
+  letter-spacing: 0.1em;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
+.brand-logo--dark {
+  color: var(--color-bg-light);
+}
+
 .brand-logo--mark-only .brand-logo__mark {
-  width: 44px;
-  height: 68px;
+  width: 36px;
+  height: 62px;
+  flex-basis: 36px;
 }
 
 @media (max-width: 480px) {

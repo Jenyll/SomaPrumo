@@ -2,41 +2,32 @@ Projeto: SomaPrumo
 ===================
 
 Fase atual
-- Landing institucional refatorada para Plataforma + Automação + Especialização (2026-09-13).
+- Landing comercial editorial revisada para três perfis de demanda (Para você, MEI e Empresas) com navegação real, cards/accordion acessíveis, seleções sem redirecionamento falso e login demonstrativo em /login (2026-09-13).
+- Refinamento final concluído: âncoras internas alinhadas aos IDs reais da home e estrutura comercial validada sem links quebrados, sem checkout e sem preços inventados.
 
 Objetivo concluído nesta etapa
-- Apresentação comercial de operações financeiras, contábeis e fiscais, com automações personalizadas e auditoria fiscal; foco B2B e atendimento também a pessoas físicas.
+- Reforçar a entrada comercial da home, reduzir institucionalização excessiva e manter a identidade premium/editorial da SomaPrumo sem criar checkout ou integrações inexistentes.
 
 Concluído
-- Documentação inicial, scaffold Vue 3/TypeScript/Vite e camadas existentes preservados.
-- Trabalho local anterior de rebranding, alias @ e assets oficiais incorporado à evolução.
-- Tokens charcoal/bronze/sand/ivory e Cormorant Garamond + Inter centralizados (ADR-009).
-- Header responsivo, Hero editorial, quatro pilares, automação, metodologia, auditoria, tecnologia, equipe, CTA e footer.
-- Removidos da UI pública métricas sem evidência e conteúdo de engenharia/construção.
-- Navegação por âncoras, detalhes das áreas, carrossel acessível e reduced motion.
-- Revisão visual em 375, 390, 430, 768, 1024, 1280, 1440 e 1920 px, sem overflow horizontal detectado.
-- Type-check, lint, 5 testes Vitest e 10 testes Playwright passando; build local válido em 2026-09-13.
-- Auditoria e baseline registrados em docs/FRONTEND_AUDIT.md; continuidade em docs/PROGRESS.md.
+- Header compacto, sticky e proporcional com navegação real e CTA discreto.
+- Hero ajustado para a narrativa "Operações com clareza" com CTA primário real e CTA secundário placeholder sem ação comercial.
+- Nova faixa de confiança com foco em rastreabilidade, validação humana e processo definido.
+- Seção comercial editorial com tabs para Para você / MEI / Empresas e painel de detalhes por demanda.
+- Plataforma, automação, auditoria e planos revisados para reduzir repetição e priorizar clareza comercial.
+- Login de demonstração em /login e rotas preservadas sem autenticação real.
+- Marcação e navegação revisadas para manter identidade visual, acessibilidade e responsividade.
 
 Pendências
-- Contato real será adicionado pelo responsável. Placeholder autorizado: “loreimpus” em src/config/brand.ts (`contact.label` e `contact.href`).
-- Backend inexistente; módulos e integrações são apresentação comercial, não operações reais.
-- Contratos de API, fixtures, regras e autenticação real continuam para etapas futuras; não alterados nesta tarefa.
-- Original partner-1.svg tem 5,59 MB; preservado com carregamento tardio. Avaliar derivados otimizados futuramente.
-- Fontes dependem de Google Fonts, com fallbacks locais.
-
-Decisões
-- ADR-001 a ADR-006 mantidos: Vue, Clean Architecture, repositories, mocks, Vitest e Playwright.
-- ADR-007 evoluído pelo ADR-009: Inter como fonte funcional aprovada.
-- ADR-008 mantido: n8n fora da arquitetura.
-- ADR-010: escopo comercial atual, apresentação separada do domínio e contato temporário.
+- Canal oficial de contato e URL de WhatsApp/checkout ainda aguardam definição do responsável.
+- Backend e autenticação real continuam não implementados.
 
 Validação
-- npm run check: passou.
-- npm run test:e2e: 10 passaram, Chromium instalado para a sessão em /tmp/somaprumo-browsers.
-- Nenhuma suíte separada de integração com backend existe; Vitest monta e exercita a Home integrada aos componentes.
-- PR aberto: https://github.com/Jenyll/SomaPrumo/pull/1 — feat/landing-institucional → feat/frontend-foundation.
-- Arquivo incremental tsconfig.tsbuildinfo permanece com alteração local, fora do commit.
+- npm run type-check: OK
+- npm run lint: OK
+- npm run test:ci: OK
+- npm run build: OK
+- npm run test:e2e: OK
 
-Ambiente de desenvolvimento e CI
-- Node 24.15+ da linha 24, definido em .nvmrc (ADR-011). Corrige incompatibilidade do workflow anterior em Node 20 com jsdom/undici.
+Ambiente
+- Vue 3 + TypeScript + Vite + Vue Router preservados.
+- Clean Architecture e estrutura atual mantidas.

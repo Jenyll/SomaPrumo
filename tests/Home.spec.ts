@@ -13,7 +13,7 @@ describe('Home', () => {
     expect(wrapper.findAll('h1')).toHaveLength(1)
     expect(wrapper.find('#solucoes').text()).toContain('Investimentos')
     expect(wrapper.find('#automacao').text()).toContain('Revisão humana')
-    expect(wrapper.find('#auditoria').text()).toContain('profissional auditor fiscal')
+    expect(wrapper.find('#auditoria').text()).toContain('conhecimento especializado na área fiscal')
     expect(wrapper.text()).not.toMatch(/engenharia|construção|\bobras?\b|38%|96%|90%|12h|4x/i)
   })
 

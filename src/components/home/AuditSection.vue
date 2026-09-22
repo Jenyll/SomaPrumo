@@ -10,14 +10,14 @@ import { brand } from '@/config/brand'
         <p class="font-display">Tecnologia para analisar.<br /><em>Experiência para interpretar.</em></p>
         <div class="audit-principle">
           <span aria-hidden="true">↳</span>
-          <p>Processos fiscais exigem critério, evidência e responsabilidade.</p>
+          <p>Processos fiscais exigem critério, evidência e res0ponsabilidade.</p>
         </div>
       </div>
 
       <div>
         <p class="eyebrow">Auditoria fiscal</p>
         <h2 id="audit-title">Um olhar especializado<br />sobre o que importa.</h2>
-        <p class="audit-copy">O SomaPrumo conta com profissional auditor fiscal na operação. Tecnologia organiza e cruza informações; a análise especializada interpreta inconsistências, riscos e evidências para apoiar decisões com mais segurança.</p>
+        <p class="audit-copy">A SomaPrumo possui conhecimento especializado na área fiscal. Combinamos tecnologia, revisão de informações e análise operacional para identificar inconsistências, riscos e oportunidades de melhoria.</p>
         <div class="audit-proof" aria-label="Diferencial de auditoria">
           <span>Análise especializada</span>
           <strong>com profissional auditor fiscal</strong>

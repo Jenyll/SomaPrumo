@@ -5,7 +5,7 @@ import {
 } from 'vue-router'
 
 import Home from '../../presentation/pages/Home.vue'
-import Login from '../../presentation/pages/Login.vue'
+import LoginPage from '../../presentation/pages/LoginPage.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -16,7 +16,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
-    component: Login,
+    component: LoginPage,
   },
 ]
 
