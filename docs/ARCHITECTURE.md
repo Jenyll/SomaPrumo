@@ -32,3 +32,9 @@ Landing institucional (2026-09-13, ADR-010)
 - Estado de navegação e carrossel é local ao componente. Pinia e Router existentes permanecem intactos.
 - Tokens e tipografia centralizados em src/assets/styles; estilos comuns em src/styles/main.css.
 - Domain/Application/Infrastructure e contratos de API não foram alterados; nenhuma integração ou backend adicionado.
+
+Núcleo financeiro — 2026-09-22 (ADR-012)
+- Domain: entidades, Money, validações, parcelas/provisões e porta FinancialRepository.
+- Application: serviços puros e FinancialWorkspace, com comandos que atualizam saldos e auditam em uma unidade de trabalho.
+- Infrastructure: MockFinancialRepository vazio, sem dados pessoais, com cópias serializadas e confirmação atômica.
+- Presentation permanece desacoplada. A próxima tela deverá usar FinancialWorkspace, sem recalcular fórmulas no componente.

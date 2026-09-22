@@ -31,3 +31,7 @@ Escopo desta entrega
 - O domínio e os contratos de aplicação existentes permanecem independentes da apresentação (ADR-002, ADR-010).
 - Contato temporário “loreimpus”, solicitado pelo responsável durante esta tarefa. Canal real será preenchido depois em `src/config/brand.ts`.
 - n8n permanece fora da arquitetura (ADR-008).
+
+Atualização de escopo — 2026-09-22
+- O pedido de concluir a adaptação da planilha acrescentou um núcleo financeiro em Domain/Application/Infrastructure (ADR-012).
+- Esse núcleo é testado com repositório em memória. O escopo institucional descrito acima continua válido para as telas públicas: não há área financeira conectada, backend ou autenticação.

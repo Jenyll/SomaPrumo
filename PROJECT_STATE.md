@@ -1,33 +1,33 @@
-Projeto: SomaPrumo
-===================
+# SomaPrumo — estado atual
 
-Fase atual
-- Landing comercial editorial revisada para três perfis de demanda (Para você, MEI e Empresas) com navegação real, cards/accordion acessíveis, seleções sem redirecionamento falso e login demonstrativo em /login (2026-09-13).
-- Refinamento final concluído: âncoras internas alinhadas aos IDs reais da home e estrutura comercial validada sem links quebrados, sem checkout e sem preços inventados.
+Atualizado em 22/09/2026.
 
-Objetivo concluído nesta etapa
-- Reforçar a entrada comercial da home, reduzir institucionalização excessiva e manter a identidade premium/editorial da SomaPrumo sem criar checkout ou integrações inexistentes.
+## Concluído
 
-Concluído
-- Header compacto, sticky e proporcional com navegação real e CTA discreto.
-- Hero ajustado para a narrativa "Operações com clareza" com CTA primário real e CTA secundário placeholder sem ação comercial.
-- Nova faixa de confiança com foco em rastreabilidade, validação humana e processo definido.
-- Seção comercial editorial com tabs para Para você / MEI / Empresas e painel de detalhes por demanda.
-- Plataforma, automação, auditoria e planos revisados para reduzir repetição e priorizar clareza comercial.
-- Login de demonstração em /login e rotas preservadas sem autenticação real.
-- Marcação e navegação revisadas para manter identidade visual, acessibilidade e responsividade.
+- Landing comercial editorial, marca, navegação, acessibilidade e login demonstrativo preservados.
+- Núcleo financeiro derivado das regras válidas da planilha: despesas, parcelas por competência, rateios, faturas/pagamentos, recebíveis/baixas, contas, transferências, orçamento, provisões e movimentos de renda fixa.
+- Correção da implementação interrompida: sintaxe, imports/exports, precisão monetária, sinais, datas, duplicidades e encapsulamento.
+- FinancialWorkspace integra os cálculos com um repositório mock vazio, unidade de trabalho atômica e auditoria por usuário/operação/data.
+- Documentação de análise, regras, domínio e contratos atualizada no ADR-012.
 
-Pendências
-- Canal oficial de contato e URL de WhatsApp/checkout ainda aguardam definição do responsável.
-- Backend e autenticação real continuam não implementados.
+## Limites e próximos marcos
 
-Validação
-- npm run type-check: OK
-- npm run lint: OK
-- npm run test:ci: OK
-- npm run build: OK
-- npm run test:e2e: OK
+- O núcleo financeiro é consumível por código e testado; ainda não está conectado a telas.
+- Mock em memória: sem persistência entre sessões, backend, autenticação real, autorização multiusuário ou integração bancária.
+- Não há importador XLSM; dados pessoais/de teste do arquivo não foram carregados no produto.
+- Cadastros operacionais completos, estornos/créditos, baixa parcial de provisões e políticas de fechamento/vencimento de cartão são etapas futuras.
+- Renda variável, câmbio, fiscal avançado e engenharia não foram antecipados.
+- Canal comercial oficial continua pendente de definição.
 
-Ambiente
-- Vue 3 + TypeScript + Vite + Vue Router preservados.
-- Clean Architecture e estrutura atual mantidas.
+## Validação
+
+- npm run check: tipos, lint, 56 testes unitários/integração e build aprovados.
+- Testes de navegador locais bloqueados na inicialização do Chromium pelo sandbox macOS; detalhes em docs/TESTING.md.
+
+## Ambiente
+
+Vue 3, TypeScript, Vite, Vue Router e Pinia. Node 24 conforme ADR-011. Sem dependências novas.
+
+## Revisão
+
+PR #2: https://github.com/Jenyll/SomaPrumo/pull/2. Branch feat/financial-core, baseada em feat/landing-institucional.

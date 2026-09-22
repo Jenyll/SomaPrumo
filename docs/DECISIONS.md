@@ -68,3 +68,16 @@ ADR-011: Node 24 para desenvolvimento e CI
 - Status: implementado.
 - Decisão: .nvmrc define Node 24; CI lê o mesmo arquivo. Usar versão 24.15 ou superior da linha 24, compatível com jsdom 30 já fixado no lockfile.
 - Justificativa: CI anterior usava Node 20 e falhou ao inicializar o Vitest (undici/webidl.util.markAsUncloneable), embora a validação local em Node 24.18 passasse. O problema precedia a refatoração e foi evidenciado no primeiro PR. Nenhuma dependência foi atualizada para contornar o erro.
+
+ADR-012: Núcleo financeiro derivado da planilha, com unidade de trabalho em memória
+- Data: 2026-09-22
+- Status: implementado.
+- Decisão: concluir Domain/Application/Infrastructure antes de conectar telas. FinancialWorkspace recebe uma porta FinancialRepository; MockFinancialRepository começa vazio, opera sobre cópias e confirma comando e auditoria atomicamente.
+- Justificativa: a implementação iniciada estava interrompida e precisava de regras verificáveis. Reutiliza ADR-001/002/003/004/005 sem backend fictício, mudança da landing ou dependências novas.
+- Money usa centavos inteiros seguros e arredondamento decimal. Valores positivos e tipos de movimento definem os sinais; não há importação automática de strings localizadas.
+- ExpenseInstallment é a unidade de competência. Divisões conservam os totais de compra, parcela e pessoa. Compra no cartão e pagamento de fatura têm efeitos distintos: competência versus caixa.
+- Fechamento administrativo, quitação e baixa de terceiros são estados separados. Valores recebidos mantêm a data do caixa e a competência da origem.
+- Realizado vem das parcelas; provisões pendentes são compromisso adicional. A realização vincula uma parcela da mesma categoria e competência. Sem limiar de risco arbitrário.
+- Aporte/resgate atualizam investimento e conta juntos; taxas/rendimentos registrados são internos ao investimento.
+- commandId é único por repositório: repetição é rejeitada, sem gravação parcial. Auditoria exige actorId, ação, data e revisão, sem alegar autenticação real.
+- Escopo: núcleo e mocks; telas operacionais, banco, autenticação, integração bancária, estornos, câmbio e renda variável continuam futuros.

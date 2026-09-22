@@ -38,3 +38,11 @@ Resultados em 2026-09-13
 Ambiente de execução (ADR-011)
 - Usar Node 24.15+ da linha 24; .nvmrc e CI compartilham a versão 24.
 - CI inicial do PR falhou com Node 20 na inicialização de jsdom/undici, antes de executar testes. Corrigida a configuração de runtime para corresponder ao ambiente local validado (24.18).
+
+Financeiro — 2026-09-22
+- npm run check aprovado: type-check, lint, 56 testes unitários/integração em 5 arquivos e build.
+- Cobertura funcional: parcelas dezembro/janeiro, rateio em centavos por compra/parcela/pessoa, pagamento parcial e fechamento, recebimento de dívida de outra competência, baixa, transferência atômica, aporte/resgate/taxa/rendimento, orçamento excedido, provisão realizada, histórico inativo, duplicidades, rollback e snapshots independentes.
+- Money: arredondamento decimal positivo/negativo, valores inválidos/localizados rejeitados, overflow, divisão negativa e JSON.
+- Os testes de investimento e orçamento usam as implementações reais, não cálculos simulados dentro do teste.
+- E2E local não validado: a tentativa inicial encontrou EPERM no servidor; após liberação de rede e instalação do Chromium em /tmp/somaprumo-browsers, o sandbox macOS bloqueou MachPortRendezvousServer antes de abrir as páginas. Isso não é evidência de falha na interface.
+- O workflow existente executa a suíte de navegador em Linux. A landing não foi alterada nesta entrega.
