@@ -23,3 +23,12 @@ Padrões
 
 Observações
 - Backend ainda não existe — usar Mock Repositories que implementam as interfaces definidas no Domain/Ports
+
+
+Landing institucional (2026-09-13, ADR-010)
+- Home.vue compõe SiteHeader, HeroSection, SolutionsSection, AutomationSection, AuditSection, TeamSection, ContactSection e SiteFooter.
+- Componentes reutilizados em src/components/brand e src/components/home; não movidos para evitar quebrar o trabalho local existente.
+- Conteúdo comercial de pilares/metodologia em src/data/solutions.ts; marca, navegação e contato em src/config/brand.ts; retratos em src/data/team.ts.
+- Estado de navegação e carrossel é local ao componente. Pinia e Router existentes permanecem intactos.
+- Tokens e tipografia centralizados em src/assets/styles; estilos comuns em src/styles/main.css.
+- Domain/Application/Infrastructure e contratos de API não foram alterados; nenhuma integração ou backend adicionado.

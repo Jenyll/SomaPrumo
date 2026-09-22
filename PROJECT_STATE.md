@@ -1,40 +1,33 @@
 Projeto: SomaPrumo
 ===================
 
-Fase atual:
-- Inicialização / documentação (Discovery & Setup)
+Fase atual
+- Landing comercial editorial revisada para três perfis de demanda (Para você, MEI e Empresas) com navegação real, cards/accordion acessíveis, seleções sem redirecionamento falso e login demonstrativo em /login (2026-09-13).
+- Refinamento final concluído: âncoras internas alinhadas aos IDs reais da home e estrutura comercial validada sem links quebrados, sem checkout e sem preços inventados.
 
-Objetivo atual:
-- Preparar a estrutura documental, decisões arquiteturais e regras de continuidade. Não implementar telas ou funcionalidades.
+Objetivo concluído nesta etapa
+- Reforçar a entrada comercial da home, reduzir institucionalização excessiva e manter a identidade premium/editorial da SomaPrumo sem criar checkout ou integrações inexistentes.
 
-Concluído:
-- Documento inicial do produto (docs/PRODUCT.md)
-- Decisões arquiteturais iniciais (docs/DECISIONS.md)
-- Estrutura de docs criada
+Concluído
+- Header compacto, sticky e proporcional com navegação real e CTA discreto.
+- Hero ajustado para a narrativa "Operações com clareza" com CTA primário real e CTA secundário placeholder sem ação comercial.
+- Nova faixa de confiança com foco em rastreabilidade, validação humana e processo definido.
+- Seção comercial editorial com tabs para Para você / MEI / Empresas e painel de detalhes por demanda.
+- Plataforma, automação, auditoria e planos revisados para reduzir repetição e priorizar clareza comercial.
+- Login de demonstração em /login e rotas preservadas sem autenticação real.
+- Marcação e navegação revisadas para manter identidade visual, acessibilidade e responsividade.
 
-Em andamento:
-- Preenchimento de detalhes de arquitetura frontend e modelos de domínio
-- Scaffold frontend inicial em progresso (branch feat/frontend-foundation)
+Pendências
+- Canal oficial de contato e URL de WhatsApp/checkout ainda aguardam definição do responsável.
+- Backend e autenticação real continuam não implementados.
 
-Próximos passos:
-- Definir mocks e contratos de API iniciais (docs/API_CONTRACTS.md, docs/MOCKS.md)
-- Padronizar validações e regras de negócio (docs/VALIDATIONS.md, docs/BUSINESS_RULES.md)
-- Criar esqueleto de project setup (sem telas)
-- Scaffold frontend criado; executar checagens e corrigir problemas
+Validação
+- npm run type-check: OK
+- npm run lint: OK
+- npm run test:ci: OK
+- npm run build: OK
+- npm run test:e2e: OK
 
-Problemas conhecidos:
-- Backend inexistente — depender de Mock Repositories
-- Recursos/PO ainda não definidos (contato para decisões de produto)
-
-Decisões pendentes:
-- Detalhes do modelo de autorização/autenticação
-- Padrões de deploy e CI/CD
-
-Status dos testes:
-Configuração de framework definida (Vitest + Playwright).
-- Testes unitários: passando (1 teste de smoke)
-- E2E: configuração inicial pronta (sem testes E2E implementados)
-
-Último build válido:
-Build de scaffold válido: `vite build` executado com sucesso em 2026-08-30.
-
+Ambiente
+- Vue 3 + TypeScript + Vite + Vue Router preservados.
+- Clean Architecture e estrutura atual mantidas.

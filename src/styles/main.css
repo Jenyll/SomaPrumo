@@ -1,47 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
-:root {
-                    --bg: #f4f7f5;
-                    --bg-strong: #eaf4f1;
-                    --panel: #ffffff;
-                    --panel-soft: rgba(255, 255, 255, 0.7);
-                    --text: #0f172a;
-                    --muted: #475569;
-                    --primary: #0b7c6b;
-                    --primary-deep: #0f172a;
-                    --line: rgba(148, 163, 184, 0.2);
-                    --shadow-soft: 0 22px 55px rgba(15, 23, 42, 0.08);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap');
+@import '../assets/styles/tokens.css';
+@import '../assets/styles/typography.css';
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { margin: 0; min-width: 320px; background: var(--color-bg-light); color: var(--color-text-dark); }
+img { max-width: 100%; display: block; }
+button, a, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-underline-offset: 6px; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 5px; }
+[id] { scroll-margin-top: 96px; }
+.container { width: min(var(--container-width), calc(100% - var(--page-gutter) * 2)); margin-inline: auto; }
+.section-space { padding-block: var(--section-space); }
+.dark-section { background: var(--color-bg-dark); color: var(--color-text-light); --color-focus: var(--sp-bronze-400); }
+.eyebrow { margin: 0 0 22px; color: var(--color-accent-on-light); font-size: .69rem; font-weight: 600; line-height: 1.5; letter-spacing: .18em; text-transform: uppercase; }
+.dark-section .eyebrow { color: var(--color-brand-primary); }
+.section-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; align-items: end; margin-bottom: 48px; }
+.section-intro > p { max-width: 470px; margin: 0; color: var(--color-text-muted); }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 48px; padding: 14px 22px; border: 1px solid transparent; border-radius: var(--radius-small); font-size: .8rem; font-weight: 500; text-decoration: none; transition: background .2s, color .2s; }
+.button-primary { background: var(--sp-bronze-400); color: var(--sp-charcoal-950); }
+.button-primary:hover { background: var(--sp-sand-300); }
+.button-dark { background: var(--sp-charcoal-950); color: var(--sp-ivory-100); }
+.button-dark:hover { background: var(--sp-charcoal-800); }
+.text-link { display: inline-flex; gap: 24px; align-items: center; min-height: 48px; font-size: .8rem; text-decoration: underline; }
+.actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.skip-link { position: fixed; left: 16px; top: 16px; z-index: 40; padding: 14px; background: var(--color-bg-light); color: var(--color-text-dark); }
+.skip-link:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; padding: 0; overflow: hidden; white-space: nowrap; }
+@media (max-width: 767px) {
+  html { scroll-padding-top: 88px; }
+  [id] { scroll-margin-top: 88px; }
+  .section-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
+  .eyebrow { margin-bottom: 16px; font-size: .65rem; }
+  .actions { gap: 12px 24px; }
 }
-
-* {
-                    box-sizing: border-box;
-}
-
-html {
-                    scroll-behavior: smooth;
-}
-
-body {
-                    margin: 0;
-                    min-height: 100vh;
-                    background:
-                                        radial-gradient(circle at top left, rgba(11, 124, 107, 0.12), transparent 30%),
-                                        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.08), transparent 30%),
-                                        var(--bg);
-                    color: var(--text);
-                    font-family: 'Manrope', 'Segoe UI', sans-serif;
-}
-
-img {
-                    max-width: 100%;
-                    display: block;
-}
-
-button,
-a {
-                    font: inherit;
-}
-
-#app {
-                    min-height: 100vh;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

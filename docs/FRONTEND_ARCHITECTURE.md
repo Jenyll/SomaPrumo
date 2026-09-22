@@ -67,3 +67,10 @@ Qualidade
 - TypeScript estrito
 - Linters e formatação (ESLint, Prettier)
 - Testes unitários com Vitest; E2E com Playwright
+
+
+Atualização da apresentação pública — 2026-09-13
+- A árvore acima descreve o scaffold. A landing reutiliza também src/components/{brand,home}, src/config/brand.ts e src/data/{team,solutions}.ts, introduzidos na evolução local.
+- Home.vue apenas compõe seções; estilos de seção são scoped, com tokens globais centralizados.
+- A rota / permanece única; navegação interna por âncoras sem estado global desnecessário.
+- Decisões: ADR-002, ADR-009 e ADR-010. Domain e Application continuam sem dependência de Vue.
